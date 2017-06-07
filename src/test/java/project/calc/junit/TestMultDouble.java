@@ -7,17 +7,16 @@ import org.junit.Test;
 
 import org.junit.runners.Parameterized;
 
-
 import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestMultDouble extends BaseTest{
+public class TestMultDouble extends BaseTest {
 	private double a;
 	private double b;
 	private double expected;
 
-		public TestMultDouble(double a, double b, double expected) {
+	public TestMultDouble(double a, double b, double expected) {
 		this.a = a;
 		this.b = b;
 		this.expected = expected;

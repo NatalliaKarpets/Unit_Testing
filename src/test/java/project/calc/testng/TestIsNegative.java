@@ -1,17 +1,21 @@
 package project.calc.testng;
 
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class TestIsNegative {
+public class TestIsNegative extends BaseTest {
 
-	
+	@Test(dataProvider = "isNegDataProvider")
+	public void testNegative(long a, boolean expected) {
+		boolean isNegLong = calc.isNegative(a);
+		Assert.assertEquals(isNegLong, expected);
+	}
 
-	@Test 
-	@Parameters({ "a" })
-	public void testNegative(long a) {
-		
-		Assert.assertTrue(a<0L);
+	@DataProvider(name = "isNegDataProvider")
+	public Object[][] isNegDataProvider() {
+		return new Object[][] { { -255, true }, { 0, false }, { 3, false }
+
+		};
 	}
 }

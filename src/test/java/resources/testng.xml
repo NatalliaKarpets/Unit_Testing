@@ -16,124 +16,95 @@
 	</test> <!-- Test -->
 
 	<test name="TestSumDouble">
-		<parameter name="a" value="2.0" />
-		<parameter name="b" value="3.0" />
-		<parameter name="expected" value="5.0" />
 		<classes>
 			<class name="project.calc.testng.TestSumDouble" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestSubLong">
-		<parameter name="a" value="4" />
-		<parameter name="b" value="2" />
-		<parameter name="expected" value="2" />
 		<classes>
 			<class name="project.calc.testng.TestSubLong" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestSubDouble">
-		<parameter name="a" value="4.0" />
-		<parameter name="b" value="2.0" />
-		<parameter name="expected" value="2.0" />
 		<classes>
 			<class name="project.calc.testng.TestSubDouble" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestSqrtDouble">
-		<parameter name="a" value="9.0" />
-		<parameter name="expected" value="3.0" />
 		<classes>
 			<class name="project.calc.testng.TestSqrtDouble" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestDivDouble">
-		<parameter name="a" value="9.0" />
-		<parameter name="b" value="3.0" />
-		<parameter name="expected" value="3.0" />
 		<classes>
 			<class name="project.calc.testng.TestDivDouble" />
 		</classes>
 	</test> <!-- Test -->
 
+	<test name="TestDivLong">
+		<classes>
+			<class name="project.calc.testng.TestDivLong" />
+		</classes>
+	</test> <!-- Test -->
+
 	<test name="TestMultDouble">
-		<parameter name="a" value="3.0" />
-		<parameter name="b" value="3.0" />
-		<parameter name="expected" value="9.0" />
 		<classes>
 			<class name="project.calc.testng.TestMultDouble" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestMultLong">
-		<parameter name="a" value="3" />
-		<parameter name="b" value="3" />
-		<parameter name="expected" value="9" />
 		<classes>
 			<class name="project.calc.testng.TestMultLong" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestPow">
-		<parameter name="a" value="2.0" />
-		<parameter name="b" value="3.0" />
-		<parameter name="expected" value="8.0" />
 		<classes>
 			<class name="project.calc.testng.TestPow" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestSin">
-		<parameter name="a" value="90.0" />
-		<parameter name="expected" value="0.8939966636005579" />
 		<classes>
 			<class name="project.calc.testng.TestSin" />
 		</classes>
 	</test> <!-- Test -->
 
 	<test name="TestCos">
-		<parameter name="a" value="90.0" />
-		<parameter name="expected" value="-0.44807361612" />
 		<classes>
 			<class name="project.calc.testng.TestCos" />
 		</classes>
 	</test> <!-- Test -->
-	
+
 	<test name="TestTan">
-		<parameter name="a" value="90.0" />
-		<parameter name="expected" value="-1.99520041221" />
 		<classes>
 			<class name="project.calc.testng.TestTan" />
 		</classes>
 	</test> <!-- Test -->
-	
+
 	<test name="TestCot">
-		<parameter name="a" value="90" />
-		<parameter name="expected" value="-1.99520041221" />
 		<classes>
 			<class name="project.calc.testng.TestCot" />
 		</classes>
 	</test> <!-- Test -->
-	
+
 	<test name="TestPositive">
-		<parameter name="a" value="1" />
-		
 		<classes>
 			<class name="project.calc.testng.TestIsPositive" />
 		</classes>
 	</test> <!-- Test -->
-	
+
 	<test name="TestNegative">
-		<parameter name="a" value="-1" />
-		
 		<classes>
 			<class name="project.calc.testng.TestIsNegative" />
 		</classes>
 	</test> <!-- Test -->
-	
+
 
 
 

@@ -7,10 +7,10 @@ import com.epam.tat.module4.Calculator;
 public class BaseTest {
 
 	protected Calculator calc;
-	
+
 	@Before
 	public void setUp() {
 		calc = new Calculator();
 	}
-	
+
 }

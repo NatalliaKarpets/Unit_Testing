@@ -9,27 +9,29 @@ import org.junit.runners.Parameterized;
 
 import org.junit.runner.RunWith;
 
-import static org.testng.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestIsNegative {
-	private long a;
+public class TestIsNegative extends BaseTest {
 
-		public TestIsNegative(long a) {
+	private long a;
+	private boolean expected;
+
+	public TestIsNegative(long a, boolean expected) {
 		this.a = a;
-		
+		this.expected = expected;
 	}
 
 	@Parameterized.Parameters
 	public static Collection<Object[]> data() {
-		Object[][] data = new Object[][] { { -1 } };
+		Object[][] data = new Object[][] { { -255, true }, { 0, false }, { 3, false } };
 		return Arrays.asList(data);
 	}
 
 	@Test
 	public void IsNegative() {
-		
-		assertTrue(a<0L);
+		boolean isNegLong = calc.isNegative(a);
+		assertEquals(expected, isNegLong);
 
 	}
 }

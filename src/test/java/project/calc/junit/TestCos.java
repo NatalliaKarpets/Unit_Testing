@@ -7,16 +7,15 @@ import org.junit.Test;
 
 import org.junit.runners.Parameterized;
 
-
 import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestCos extends BaseTest{
+public class TestCos extends BaseTest {
 	private double a;
-		private double expected;
+	private double expected;
 
-		public TestCos(double a, double expected) {
+	public TestCos(double a, double expected) {
 		this.a = a;
 		this.expected = expected;
 	}

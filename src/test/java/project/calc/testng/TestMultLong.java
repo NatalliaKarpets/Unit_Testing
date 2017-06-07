@@ -1,19 +1,24 @@
 package project.calc.testng;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.epam.tat.module4.Calculator;
-
 public class TestMultLong extends BaseTest {
 
-	
-	@Test 
+	@Test(dataProvider = "multDataProvider")
 	@Parameters({ "a", "b", "expected" })
-	public void testMultLong(long a, long b, long expected) {
-		long multLong = calc.mult(a, b);
+	public void testMultLong(double a, double b, double expected) {
+		double multLong = calc.mult(a, b);
 		Assert.assertEquals(multLong, expected);
+	}
+
+	@DataProvider(name = "multDataProvider")
+
+	public Object[][] multDataProvider() {
+		return new Object[][] { { 9, 9, 81 }, { 9, 0, 0 }, { -9, -3, 27 }, { -9, 3, -27 }
+
+		};
 	}
 }

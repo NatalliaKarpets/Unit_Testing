@@ -1,20 +1,24 @@
 package project.calc.testng;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.epam.tat.module4.Calculator;
+public class TestPow extends BaseTest {
 
-public class TestPow extends BaseTest{
-
-	
-
-	@Test 
+	@Test(dataProvider = "powDataProvider")
 	@Parameters({ "a", "b", "expected" })
 	public void testPow(double a, double b, double expected) {
-		double pow = calc.pow(a, b);
-		Assert.assertEquals(pow, expected);
+		double powDouble = calc.pow(a, b);
+		Assert.assertEquals(powDouble, expected);
+	}
+
+	@DataProvider(name = "powDataProvider")
+
+	public Object[][] powDataProvider() {
+		return new Object[][] { { 2.00, 3.00, 8.00 }, { 0.00, 0.00, 0.00 }, { -2.00, 3.00, -8.00 }
+
+		};
 	}
 }

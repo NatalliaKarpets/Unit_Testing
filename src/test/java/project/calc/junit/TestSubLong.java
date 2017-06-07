@@ -7,17 +7,16 @@ import org.junit.Test;
 
 import org.junit.runners.Parameterized;
 
-
 import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestSubLong extends BaseTest{
+public class TestSubLong extends BaseTest {
 	private long a;
 	private long b;
 	private long expected;
 
-		public TestSubLong(long a, long b, long expected) {
+	public TestSubLong(long a, long b, long expected) {
 		this.a = a;
 		this.b = b;
 		this.expected = expected;

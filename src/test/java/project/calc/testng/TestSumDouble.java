@@ -2,12 +2,8 @@ package project.calc.testng;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.epam.tat.module4.Calculator;
 
 public class TestSumDouble extends BaseTest {
 
@@ -17,10 +13,11 @@ public class TestSumDouble extends BaseTest {
 		double sumDouble = calc.sum(a, b);
 		Assert.assertEquals(sumDouble, expected);
 	}
+
 	@DataProvider(name = "sumDataProvider")
 
 	public Object[][] sumDataProvider() {
-		return new Object[][] { { 1, 1, 2 }, { 2, 2, 4 }
+		return new Object[][] { { 1.00, 1.23, 2.23 }, { 2.0, 2.0, 4.0 }, { 0.0, 0.0, 0.0 }, { -0.1, +0.1, 0.0 }
 
 		};
 	}

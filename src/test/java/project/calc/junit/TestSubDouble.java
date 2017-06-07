@@ -11,12 +11,12 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class TestSubDouble extends BaseTest{
+public class TestSubDouble extends BaseTest {
 	private double a;
 	private double b;
 	private double expected;
 
-		public TestSubDouble(double a, double b, double expected) {
+	public TestSubDouble(double a, double b, double expected) {
 		this.a = a;
 		this.b = b;
 		this.expected = expected;
